@@ -1,0 +1,15 @@
+# vim: ft=ansible :
+#
+- name: the test_host play
+  hosts: test_host
+  gather_facts: no
+
+  roles:
+    - example
+
+- name: the localhost play
+  hosts: localhost
+  gather_facts: no
+
+  roles:
+    - example

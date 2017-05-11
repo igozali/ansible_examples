@@ -1,0 +1,12 @@
+- block:
+    - name: include vars
+      include_vars: vars.yml
+      register: include_vars_result
+
+    - name: print include_vars_result
+      debug: var=include_vars_result
+
+    - name: print some_var
+      debug: var=some_var
+
+  delegate_to: localhost
